@@ -1,18 +1,26 @@
 <template>
   <div class="home">
-    <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js App" />
+    <ul>
+      <li v-for="post in posts" :key="post.id">
+        <a :href="`post/${post.id}`">{{ post.title.rendered }}</a>
+      </li>
+    </ul>
   </div>
 </template>
 
 <script>
-// @ is an alias to /src
-import HelloWorld from "@/components/HelloWorld.vue";
+import apiFetch from "@wordpress/api-fetch";
 
 export default {
   name: "Home",
-  components: {
-    HelloWorld
-  }
+  components: {},
+  data() {
+    return {
+      posts: [],
+    };
+  },
+  async beforeMount() {
+    this.posts = await apiFetch({ path: "/wp/v2/posts" });
+  },
 };
 </script>
