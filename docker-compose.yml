@@ -10,11 +10,10 @@ services:
       WORDPRESS_DB_PASSWORD: MyStr0ngP455
     volumes:
       - ./wp-headless/wp-content:/var/www/html/wp-content
-    #      - ./wp-headless/wp-config.php:/var/www/html/wp-config.php
     depends_on:
       - db
     ports:
-      - 8080:80
+      - 81:80
 
   db:
     image: mysql:latest
@@ -24,3 +23,31 @@ services:
       - "3306:3306"
     environment:
       MYSQL_ROOT_PASSWORD: MyStr0ngP455
+
+  phpmyadmin:
+    depends_on:
+      - db
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: root
+      PMA_PASSWORD: MyStr0ngP455
+
+  reverse:
+    image: nginx
+    restart: always
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
+      - ./nginx/ssl/certificates/server.crt:/etc/nginx/server.crt
+      - ./nginx/ssl/certificates/server.key:/etc/nginx/server.key
+      - ./nginx/ssl/certificates/dhparam.pem:/etc/nginx/dhparam.pem
+    depends_on:
+      - wordpress
+      - db
+    extra_hosts:
+      - "host.docker.internal:$DOCKERHOST"
