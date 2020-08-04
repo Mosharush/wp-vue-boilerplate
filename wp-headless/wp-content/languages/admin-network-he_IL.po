@@ -1,0 +1,1417 @@
+# Translation of WordPress - 5.4.x - Development - Administration - Network Admin in Hebrew
+# This file is distributed under the same license as the WordPress - 5.4.x - Development - Administration - Network Admin package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-04-16 23:00:31+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/3.0.0-alpha.2\n"
+"Language: he_IL\n"
+"Project-Id-Version: WordPress - 5.4.x - Development - Administration - Network Admin\n"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:255
+msgid "Deleted <span class=\"count\">(%s)</span>"
+msgid_plural "Deleted <span class=\"count\">(%s)</span>"
+msgstr[0] "נמחקו <span class=\"count\">(%s)</span>"
+msgstr[1] "נמחקו <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:248
+msgctxt "sites"
+msgid "Spam <span class=\"count\">(%s)</span>"
+msgid_plural "Spam <span class=\"count\">(%s)</span>"
+msgstr[0] "ספאם <span class=\"count\">(%s)</span>"
+msgstr[1] "ספאם <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:242
+msgid "Mature <span class=\"count\">(%s)</span>"
+msgid_plural "Mature <span class=\"count\">(%s)</span>"
+msgstr[0] "ותיק <span class=\"count\">(%s)</span>"
+msgstr[1] "ותיק <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:236
+msgid "Archived <span class=\"count\">(%s)</span>"
+msgid_plural "Archived <span class=\"count\">(%s)</span>"
+msgstr[0] "אורכב <span class=\"count\">(%s)</span>"
+msgstr[1] "אורכב <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:230
+msgid "Public <span class=\"count\">(%s)</span>"
+msgid_plural "Public <span class=\"count\">(%s)</span>"
+msgstr[0] "ציבורי <span class=\"count\">(%s)</span>"
+msgstr[1] "ציבורי <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of sites.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:223
+msgctxt "sites"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "הכל <span class=\"count\">(%s)</span>"
+msgstr[1] "הכל <span class=\"count\">(%s)</span>"
+
+#: wp-admin/network/upgrade.php:31
+msgid "<a href=\"https://wordpress.org/support/article/network-admin-updates-screen/\">Documentation on Upgrade Network</a>"
+msgstr "<a href=\"https://wordpress.org/support/article/network-admin-updates-screen/\">תיעוד בנושא שדרוג רשתות</a>"
+
+#: wp-admin/network/index.php:55
+msgid "<a href=\"https://wordpress.org/support/article/network-admin/\">Documentation on the Network Admin</a>"
+msgstr "<a href=\"https://wordpress.org/support/article/network-admin/\">תיעוד בנושא מנהל רשת</a>"
+
+#. translators: %s: Number of themes.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:331
+msgctxt "themes"
+msgid "Update Available <span class=\"count\">(%s)</span>"
+msgid_plural "Update Available <span class=\"count\">(%s)</span>"
+msgstr[0] "עדכונים זמינים <span class=\"count\">(%s)</span>"
+msgstr[1] "עדכונים זמינים <span class=\"count\">(%s)</span>"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:615
+msgid "Main"
+msgstr "ראשי"
+
+#: wp-admin/network.php:67 wp-admin/network.php:80
+msgid "<a href=\"https://wordpress.org/support/article/tools-network-screen/\">Documentation on the Network Screen</a>"
+msgstr "<a href=\"https://wordpress.org/support/article/tools-network-screen/\">תיעוד בנושא מסך רשת</a>"
+
+#: wp-admin/network.php:66 wp-admin/network.php:79
+msgid "<a href=\"https://wordpress.org/support/article/create-a-network/\">Documentation on Creating a Network</a>"
+msgstr "<a href=\"https://wordpress.org/support/article/create-a-network/\">תיעוד בנושא יצירת רשת</a>"
+
+#. translators: %s: DO_NOT_UPGRADE_GLOBAL_TABLES
+#: wp-admin/includes/network.php:115
+msgid "The constant %s cannot be defined when creating a network."
+msgstr "לא ניתן להגדיר את הקבוע %s כשיוצרים רשת אתרים."
+
+#: wp-admin/network/sites.php:195
+msgid "You are about to delete the following sites:"
+msgstr "הינך עומד למחוק את האתרים הבאים:"
+
+#: wp-admin/network/site-users.php:245
+msgid "User could not be added to this site."
+msgstr "לא ניתן להוסיף משתמש לאתר."
+
+#: wp-admin/network/site-new.php:286
+msgid "The username and a link to set the password will be mailed to this email address."
+msgstr "שם המשתמש והקישור להגדרת הסיסמה ישלחו לכתובת האימייל הזו."
+
+#. translators: %s: New network admin email.
+#: wp-admin/network/settings.php:175
+msgid "There is a pending change of the network admin email to %s."
+msgstr "קיימת בקשה בהמתנה לשינוי כתובת מנהל הרשת אל %s."
+
+#: wp-admin/includes/network.php:329
+msgid "Sub-domain Installation"
+msgstr "התקנה בתת-דומיינים"
+
+#: wp-admin/includes/network.php:298 wp-admin/includes/network.php:316
+msgid "Sub-directory Installation"
+msgstr "התקנה בתת-ספריות"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:705
+msgid "Active Child Theme"
+msgstr "תבנית-בת פעילה"
+
+#: wp-admin/network/site-info.php:192
+msgid "Attributes"
+msgstr "תכונות"
+
+#. translators: %s: File size in kilobytes.
+#: wp-admin/network/settings.php:396
+msgid "%s KB"
+msgstr "%s KB"
+
+#. translators: %s: Default network title.
+#: wp-admin/includes/network.php:169
+msgid "%s Sites"
+msgstr "אתרי %s"
+
+#. translators: %s: Theme name.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:518
+msgctxt "theme"
+msgid "Delete %s"
+msgstr "מחיקת %s"
+
+#: wp-admin/network/themes.php:93
+msgid "Sorry, you are not allowed to delete themes for this site."
+msgstr "אין לך הרשאות למחוק תבניות."
+
+#: wp-admin/network/themes.php:14
+msgid "Sorry, you are not allowed to manage network themes."
+msgstr "אין לך הרשאות לנהל תבניות ברשת."
+
+#: wp-admin/network/sites.php:315
+msgid "Sorry, you are not allowed to delete that site."
+msgstr "אין לך הרשאות למחוק אתר זה."
+
+#: wp-admin/network/site-themes.php:14
+msgid "Sorry, you are not allowed to manage themes for this site."
+msgstr "אין לך הרשאות לנהל תבניות."
+
+#: wp-admin/network/site-new.php:17
+msgid "Sorry, you are not allowed to add sites to this network."
+msgstr "אין לך הרשאות להוסיף אתרים לרשת."
+
+#: wp-admin/network/site-info.php:14 wp-admin/network/site-users.php:14
+#: wp-admin/network/site-settings.php:14
+msgid "Sorry, you are not allowed to edit this site."
+msgstr "אין לך הרשאות לערוך אתר זה."
+
+#: wp-admin/network/settings.php:346
+msgid "The email address of the first comment author on a new site."
+msgstr "כתובת האימייל של המגיב הראשון באתר."
+
+#: wp-admin/network/settings.php:342
+msgid "First Comment Email"
+msgstr "אימייל של התגובה הראשונה"
+
+#: wp-admin/includes/network.php:481
+msgid "That&#8217;s all, stop editing! Happy publishing."
+msgstr "That&#8217;s all, stop editing! Happy publishing."
+
+#. translators: 1: wp-config.php, 2: Location of wp-config file, 3: Translated
+#. version of "That's all, stop editing! Happy publishing."
+#: wp-admin/includes/network.php:473
+msgid "Add the following to your %1$s file in %2$s <strong>above</strong> the line reading %3$s:"
+msgstr "הוסיפו את הקוד הבא לקובץ %1$s שנמצא ב-%2$s <strong>מעל</strong> השורה %3$s:"
+
+#. translators: 1: Theme name, 2: Theme author.
+#: wp-admin/network/themes.php:141
+msgctxt "theme"
+msgid "%1$s by %2$s"
+msgstr "%1$s מאת %2$s"
+
+#: wp-admin/network/site-new.php:242
+msgid "Only lowercase letters (a-z), numbers, and hyphens are allowed."
+msgstr "מותר להשתמש רק באותיות קטנות (a-z), מספרים ומקפים."
+
+#: wp-admin/network/site-new.php:168
+msgctxt "email \"From\" field"
+msgid "Site Admin"
+msgstr "מנהל אתר"
+
+#. translators: %s: wp-config.php
+#: wp-admin/includes/network.php:536
+msgid "These unique authentication keys are also missing from your %s file."
+msgstr "מפתחות יחודיים אלה חסרים בקובץ %s."
+
+#. translators: %s: wp-config.php
+#: wp-admin/includes/network.php:530
+msgid "This unique authentication key is also missing from your %s file."
+msgstr "מפתח יחודי זה חסר בקובץ %s."
+
+#. translators: %s: wp-config.php
+#: wp-admin/includes/network.php:459
+msgid "We recommend you back up your existing %s file."
+msgstr "מומלץ לגבות את הקובץ %s."
+
+#. translators: 1: wp-config.php, 2: .htaccess
+#. translators: 1: wp-config.php, 2: web.config
+#: wp-admin/includes/network.php:443 wp-admin/includes/network.php:451
+msgid "We recommend you back up your existing %1$s and %2$s files."
+msgstr "מומלץ לגבות את הקבצים %1$s ו-%2$s."
+
+#. translators: 1: localhost, 2: localhost.localdomain
+#: wp-admin/includes/network.php:303
+msgid "Because you are using %1$s, the sites in your WordPress network must use sub-directories. Consider using %2$s if you wish to use sub-domains."
+msgstr "מכיוון שנעשה שימוש ב-%1$s, האתרים ברשת חייבים להשתמש בתת-ספריות. יש לשקול להשתמש ב-%2$s אם ברצונך להשתמש תת-דומיינים."
+
+#. translators: %s: Host name.
+#: wp-admin/includes/network.php:285 wp-admin/includes/network.php:345
+msgid "The internet address of your network will be %s."
+msgstr "הכתובת של הרשת תהיה %s."
+
+#. translators: 1: Site URL, 2: Host name, 3: www.
+#: wp-admin/includes/network.php:271
+msgid "We recommend you change your site domain to %1$s before enabling the network feature. It will still be possible to visit your site using the %3$s prefix with an address like %2$s but any links will not have the %3$s prefix."
+msgstr "לפני הפעלת הרשת מומלץ לשנות את כתובת האתר אל %1$s. עדיין יהיה ניתן לבקר באתר באמצעות הקידומת %3$s בכתובות כגון %2$s אבל הקישורים עצמם לא יכילו את הקידומת %3$s."
+
+#: wp-admin/includes/network.php:226
+msgid "You cannot change this later."
+msgstr "לא ניתן לשנות אחרי זה."
+
+#: wp-admin/includes/network.php:225
+msgid "Please choose whether you would like sites in your WordPress network to use sub-domains or sub-directories."
+msgstr "יש לבחור האם האתרים ברשת ישתמשו בתת-דומיינים או בתת-ספריות."
+
+#. translators: 1: mod_rewrite, 2: mod_rewrite documentation URL, 3: Google
+#. search for mod_rewrite.
+#: wp-admin/includes/network.php:213
+msgid "If %1$s is disabled, ask your administrator to enable that module, or look at the <a href=\"%2$s\">Apache documentation</a> or <a href=\"%3$s\">elsewhere</a> for help setting it up."
+msgstr "אם %1$s מושבת, יש לבקש מחברת האחסון להפעיל את המודול, או להיעזר ב<a href=\"%2$s\">תיעוד אפאצ'</a> או ב<a href=\"%3$s\">גורמים אחרים</a> כדי להגדירו."
+
+#. translators: %s: mod_rewrite
+#: wp-admin/includes/network.php:203
+msgid "It looks like the Apache %s module is not installed."
+msgstr "נראה כי המודול %s של אפאצ'י אינו מותקן."
+
+#. translators: %s: mod_rewrite
+#: wp-admin/includes/network.php:195
+msgid "Please make sure the Apache %s module is installed as it will be used at the end of this installation."
+msgstr "נא לוודא כי המודול %s של אפאצ'י מותקן, מאחר והמערכת תשתמש בתום ההתקנה."
+
+#. translators: %s: Port number.
+#: wp-admin/includes/network.php:142
+msgid "You cannot use port numbers such as %s."
+msgstr "לא ניתן להשתמש במספרי פורטים כמו %s."
+
+#: wp-admin/includes/class-wp-ms-users-list-table.php:200
+msgctxt "user"
+msgid "Registered"
+msgstr "תאריך רישום"
+
+#. translators: Number of users.
+#: wp-admin/includes/class-wp-ms-users-list-table.php:164
+msgid "Super Admin <span class=\"count\">(%s)</span>"
+msgid_plural "Super Admins <span class=\"count\">(%s)</span>"
+msgstr[0] "משתמש על <span class=\"count\">(%s)</span>"
+msgstr[1] "משתמשי על <span class=\"count\">(%s)</span>"
+
+#: wp-admin/includes/class-wp-ms-users-list-table.php:118
+msgctxt "user"
+msgid "Not Spam"
+msgstr "משתמש לגיטימי"
+
+#: wp-admin/includes/class-wp-ms-users-list-table.php:117
+msgctxt "user"
+msgid "Mark as Spam"
+msgstr "סמן כספאם"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:620
+msgid "Visit Theme Site"
+msgstr "אתר התבנית"
+
+#. translators: %s: Theme name.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:614
+msgid "Visit %s homepage"
+msgstr "אתר הבית של %s"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:583
+msgid "Broken Theme:"
+msgstr "תבנית לא תקינה:"
+
+#. translators: %s: Theme name.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:494
+msgid "Network Disable %s"
+msgstr "כיבוי %s ברשת"
+
+#. translators: %s: Theme name.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:491
+msgid "Disable %s"
+msgstr "כיבוי %s"
+
+#. translators: %s: Theme name.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:468
+msgid "Network Enable %s"
+msgstr "הפעלת %s ברשת"
+
+#. translators: %s: Theme name.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:465
+msgid "Enable %s"
+msgstr "הפעלת %s"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:381
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:501
+msgid "Network Disable"
+msgstr "כיבוי ברשת"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:381
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:501
+msgid "Disable"
+msgstr "כיבוי"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:378
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:475
+msgid "Enable"
+msgstr "הפעלה"
+
+#. translators: %s: Number of themes.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:340
+msgctxt "themes"
+msgid "Broken <span class=\"count\">(%s)</span>"
+msgid_plural "Broken <span class=\"count\">(%s)</span>"
+msgstr[0] "לא תקין <span class=\"count\">(%s)</span>"
+msgstr[1] "לא תקין <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of themes.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:322
+msgctxt "themes"
+msgid "Disabled <span class=\"count\">(%s)</span>"
+msgid_plural "Disabled <span class=\"count\">(%s)</span>"
+msgstr[0] "מכובה <span class=\"count\">(%s)</span>"
+msgstr[1] "מכובים <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of themes.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:313
+msgctxt "themes"
+msgid "Enabled <span class=\"count\">(%s)</span>"
+msgid_plural "Enabled <span class=\"count\">(%s)</span>"
+msgstr[0] "פעיל <span class=\"count\">(%s)</span>"
+msgstr[1] "פעילים <span class=\"count\">(%s)</span>"
+
+#. translators: %s: Number of themes.
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:304
+msgctxt "themes"
+msgid "All <span class=\"count\">(%s)</span>"
+msgid_plural "All <span class=\"count\">(%s)</span>"
+msgstr[0] "הכל <span class=\"count\">(%s)</span>"
+msgstr[1] "הכל <span class=\"count\">(%s)</span>"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:262
+msgid "Theme"
+msgstr "תבנית"
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:252
+msgid "You do not appear to have any themes available at this time."
+msgstr "לא נמצאו תבניות."
+
+#: wp-admin/includes/class-wp-ms-themes-list-table.php:250
+msgid "No themes found."
+msgstr "לא נמצאו תבניות."
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:705
+msgctxt "verb; site"
+msgid "Archive"
+msgstr "להעביר לארכיון"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:703
+msgid "Unarchive"
+msgstr "להוציא מארכיון"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:479
+msgid "Never"
+msgstr "לא עודכן"
+
+#. translators: 1: Site title, 2: Site tagline.
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:452
+msgid "%1$s &#8211; %2$s"
+msgstr "%1$s &#8211; %2$s"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:364
+#: wp-admin/network/site-info.php:175
+msgctxt "site"
+msgid "Registered"
+msgstr "תאריך רישום"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:363
+#: wp-admin/network/site-info.php:179
+msgid "Last Updated"
+msgstr "עדכון אחרון"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:294
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:709
+msgctxt "site"
+msgid "Not Spam"
+msgstr "לא זבל"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:293
+msgctxt "site"
+msgid "Mark as Spam"
+msgstr "זבל"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:207
+msgid "No sites found."
+msgstr "לא נמצאו אתרים."
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:42
+#: wp-admin/network/site-info.php:189
+msgid "Mature"
+msgstr "ותיק"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:41
+#: wp-admin/network/site-info.php:187
+msgid "Deleted"
+msgstr "נמחק"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:40
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:711
+#: wp-admin/network/site-info.php:186
+msgctxt "site"
+msgid "Spam"
+msgstr "זבל"
+
+#: wp-admin/includes/class-wp-ms-sites-list-table.php:39
+#: wp-admin/network/site-info.php:185
+msgid "Archived"
+msgstr "ארכיון"
+
+#: wp-admin/network/user-new.php:134 wp-admin/network/site-users.php:357
+msgid "A password reset link will be sent to the user via email."
+msgstr "לינק לאיפוס הסיסמה ישלח לאימייל של המשתמש"
+
+#. translators: 1: NOBLOGREDIRECT, 2: wp-config.php
+#: wp-admin/network/settings.php:212
+msgid "If registration is disabled, please set %1$s in %2$s to a URL you will redirect visitors to if they visit a non-existent site."
+msgstr "אם ההרשמה סגורה, אפשר לבחור כתובת אליה יופנו משתמשים שמנסים לפתוח אתר חדש, באמצעות הגדרת הקבוע %1$s בקובץ %2$s."
+
+#. translators: 1: WP_ALLOW_MULTISITE, 2: wp-config.php
+#: wp-admin/network.php:44
+msgid "You must define the %1$s constant as true in your %2$s file to allow creation of a Network."
+msgstr "כדי ליצור רשת אתרים יש להגדיר את הקבוע %1$s כ-true בקובץ %2$s."
+
+#: wp-admin/network/themes.php:253
+msgid "Themes list navigation"
+msgstr "ניווט ברשימת תבניות"
+
+#: wp-admin/network/sites.php:52
+msgid "Sites list"
+msgstr "רשימת אתרים"
+
+#: wp-admin/network/sites.php:51
+msgid "Sites list navigation"
+msgstr "ניווט ברשימת אתרים"
+
+#: wp-admin/network/site-users.php:27
+msgid "Site users list"
+msgstr "רשימת משתמשי האתר"
+
+#: wp-admin/network/site-users.php:26
+msgid "Site users list navigation"
+msgstr "ניווט ברשימת משתמשי האתר"
+
+#: wp-admin/network/site-users.php:25
+msgid "Filter site users list"
+msgstr "סינון רשימת משתמשי אתר"
+
+#: wp-admin/network/site-themes.php:24
+msgid "Site themes list"
+msgstr "רשימת תבניות באתר"
+
+#: wp-admin/network/site-themes.php:23
+msgid "Site themes list navigation"
+msgstr "ניווט ברשימת תבניות באתר"
+
+#: wp-admin/network/site-themes.php:22
+msgid "Filter site themes list"
+msgstr "סינון רשימת תבניות באתר"
+
+#: wp-admin/network/site-new.php:121
+msgid "The domain or path entered conflicts with an existing username."
+msgstr "הדומיין או הנתיב שהוזנו מתנגש עם שם המשתמש הקיים."
+
+#: wp-admin/network/sites.php:89
+msgid "The requested action is not valid."
+msgstr "הפעולה אינה חוקית."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:81
+msgid "You are about to mark the site %s as not mature."
+msgstr "ביקשת להסיר את האתר %s מרשימת האתרים הוותיקים."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:79
+msgid "You are about to mark the site %s as mature."
+msgstr "ביקשת לסמן את האתר %s כאתר ותיק."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:77
+msgid "You are about to delete the site %s."
+msgstr "ביקשת למחוק את האתר %s."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:75
+msgid "You are about to mark the site %s as spam."
+msgstr "ביקשת לסמן את האתר %s כאתר זבל."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:73
+msgid "You are about to unspam the site %s."
+msgstr "ביקשת להסיר את האתר %s מרשימת אתרי הזבל."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:71
+msgid "You are about to archive the site %s."
+msgstr "ביקשת להעביר את האתר %s לארכיון."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:69
+msgid "You are about to unarchive the site %s."
+msgstr "ביקשת להוציא את האתר %s מהארכיון."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:67
+msgid "You are about to deactivate the site %s."
+msgstr "ביקשת לכבות את האתר %s."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:65
+msgid "You are about to activate the site %s."
+msgstr "ביקשת להפעיל את האתר %s."
+
+#: wp-admin/network/site-info.php:28 wp-admin/network/site-users.php:46
+#: wp-admin/network/site-themes.php:53 wp-admin/network/site-settings.php:28
+msgid "The requested site does not exist."
+msgstr "האתר אינו קיים."
+
+#: wp-admin/network/user-new.php:29 wp-admin/network/users.php:228
+msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Users_Screen\">Documentation on Network Users</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Users_Screen\">תיעוד בנושא משתמשים ברשת</a>"
+
+#: wp-admin/network/themes.php:246
+msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Themes_Screen\">Documentation on Network Themes</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Themes_Screen\">תיעוד בנושא תבניות ברשת</a>"
+
+#: wp-admin/network/settings.php:63
+msgid "<a href=\"https://codex.wordpress.org/Network_Admin_Settings_Screen\">Documentation on Network Settings</a>"
+msgstr "<a href=\"https://codex.wordpress.org/Network_Admin_Settings_Screen\">תיעוד בנושא הגדרות רשת</a>"
+
+#. translators: 1: Site URL, 2: Server error message.
+#: wp-admin/network/upgrade.php:97
+msgid "Warning! Problem updating %1$s. Your server may not be able to connect to sites running on it. Error message: %2$s"
+msgstr "זהירות: בעיות בשדרוג %1$s. השרת כנראה לא מצליח להתחבר לאתרים שרצים עליו. הודעת שגיאה: %2$s"
+
+#: wp-admin/network/themes.php:134
+msgid "You are about to remove the following themes:"
+msgstr "ביקשת להסיר את התבניות הבאות:"
+
+#: wp-admin/network/themes.php:133
+msgid "These themes may be active on other sites in the network."
+msgstr "תבניות אלה יכולות להיות בשימוש באתרים אחרים ברשת."
+
+#. translators: %s: Number of themes.
+#: wp-admin/network/themes.php:300 wp-admin/network/site-themes.php:204
+msgid "%s theme disabled."
+msgid_plural "%s themes disabled."
+msgstr[0] "תבנית %s כובתה."
+msgstr[1] "%s תבניות כובו."
+
+#. translators: %s: Number of themes.
+#: wp-admin/network/themes.php:291 wp-admin/network/site-themes.php:195
+msgid "%s theme enabled."
+msgid_plural "%s themes enabled."
+msgstr[0] "תבנית %s הופעלה."
+msgstr[1] "%s תבניות הופעלו."
+
+#. translators: %s: Number of themes.
+#: wp-admin/network/themes.php:309
+msgid "%s theme deleted."
+msgid_plural "%s themes deleted."
+msgstr[0] "תבנית %s נמחקה."
+msgstr[1] "%s תבניות נמחקו."
+
+#: wp-admin/network/themes.php:166
+msgid "Yes, delete these themes"
+msgstr "כן, מחק את התבניות"
+
+#: wp-admin/network/themes.php:132
+msgid "Delete Themes"
+msgstr "מחיקת תבניות"
+
+#: wp-admin/network/settings.php:202
+msgid "New registrations settings"
+msgstr "הגדרות רישום"
+
+#: wp-admin/network/settings.php:401
+msgid "Size in kilobytes"
+msgstr "גודל בקילובייטים"
+
+#: wp-admin/network/settings.php:385
+msgid "Allowed file types. Separate types by spaces."
+msgstr "סוגי קבצים מותרים, מופרדים ברווחים."
+
+#: wp-admin/network/site-info.php:195
+msgid "Set site attributes"
+msgstr "הגדרת תכונות אתר"
+
+#: wp-admin/network/settings.php:465
+msgid "Enable menus"
+msgstr "הפעלת תפריטים"
+
+#. translators: 1: File name (.htaccess or web.config), 2: File path.
+#: wp-admin/includes/network.php:605 wp-admin/includes/network.php:647
+msgid "Add the following to your %1$s file in %2$s, <strong>replacing</strong> other WordPress rules:"
+msgstr "הוסיפו את הקוד הבא בקובץ %1$s ב-%2$s, <strong>החליפו</strong> חוקי וורדפרס אחרים:"
+
+#: wp-admin/network/sites.php:114 wp-admin/network/sites.php:190
+msgid "Confirm your action"
+msgstr "אישור הפעולה"
+
+#: wp-admin/network/users.php:218
+msgid "Hover over any user on the list to make the edit links appear. The Edit link on the left will take you to their Edit User profile page; the Edit link on the right by any site name goes to an Edit Site screen for that site."
+msgstr "ריחוף מעל משתמש כלשהו מציג קישור לעריכה. קישור העריכה מימין יוביל לעמוד עריכת פרופיל משתמש; קישור העריכה משמאל מוביל לעמוד עריכת האתר."
+
+#: wp-admin/network/index.php:43
+msgid "To search for a site, <strong>enter the path or domain</strong>."
+msgstr "כדי לחפש אתר, יש להזין <strong>נתיב או כתובת דומיין</strong>."
+
+#: wp-admin/network/index.php:42
+msgid "To search for a user, <strong>enter an email address or username</strong>. Use a wildcard to search for a partial username, such as user&#42;."
+msgstr "כדי לחפש משתמש, <strong>יש להזין כתובת אימייל או שם משתמש</strong>. לחיפוש משתמש חלקי יש להשתמש בביטוי user&#42;."
+
+#: wp-admin/network/index.php:40
+msgid "To add a new site, <strong>click Create a New Site</strong>."
+msgstr "להוספת אתר חדש, יש ללחוץ על <strong>אתר חדש</strong>."
+
+#: wp-admin/network/index.php:39
+msgid "To add a new user, <strong>click Create a New User</strong>."
+msgstr "להוספת משתמש חדש, יש ללחוץ על <strong>משתמש חדש</strong>."
+
+#: wp-admin/network/index.php:48
+msgid "Quick Tasks"
+msgstr "משימות מהירות"
+
+#: wp-admin/network/index.php:41
+msgid "To search for a user or site, use the search boxes."
+msgstr "לחיפוש משתמש או אתר, השתמש בשדה החיפוש."
+
+#: wp-admin/network/index.php:38
+msgid "The Right Now widget on this screen provides current user and site counts on your network."
+msgstr "וידג'ט המצב לוח הבקרה מציג מידע כמותי אודות המשתמש והאתר ברשת."
+
+#: wp-admin/network/index.php:28
+msgid "Modify global network settings"
+msgstr "שינוי הגדרות רשת גלובליות"
+
+#: wp-admin/network/index.php:27
+msgid "Update your network"
+msgstr "שדרוג רשת"
+
+#: wp-admin/network/index.php:26
+msgid "Install and activate themes or plugins"
+msgstr "התקנה והפעלה של תוספים ותבניות"
+
+#: wp-admin/network/index.php:25
+msgid "Add and manage sites or users"
+msgstr "הוספה וניהול אתרים ומשתמשים"
+
+#: wp-admin/network/index.php:24
+msgid "From here you can:"
+msgstr "מכאן ניתן:"
+
+#: wp-admin/network/index.php:23
+msgid "Welcome to your Network Admin. This area of the Administration Screens is used for managing all aspects of your Multisite Network."
+msgstr "ברוכים הבאים ללוח הבקרה של הרשת. אזור זה נועד לניהול כל ההיבטים ברשת האתרים."
+
+#: wp-admin/network/upgrade.php:138
+msgid "WordPress has been updated! Before we send you on your way, we need to individually upgrade the sites in your network."
+msgstr "וורדפרס שודרגה! עתה יש לשדרג בנפרד כל אתר ברשת."
+
+#: wp-admin/network/upgrade.php:23
+msgid "Only use this screen once you have updated to a new version of WordPress through Updates/Available Updates (via the Network Administration navigation menu or the Toolbar). Clicking the Upgrade Network button will step through each site in the network, five at a time, and make sure any database updates are applied."
+msgstr "השתמש במסך זה רק אחרי שדרוג לגרסת וורדפרס חדשה דרך מסך השדרוגים. לחיצה על הכפתור שדרוג רשת יעבור על כל אתר ברשת, חמישה בכל פעם, ויוודא שכל מסדי נתונים שודרגו בהתאם."
+
+#: wp-admin/network/upgrade.php:15 wp-admin/network/upgrade.php:42
+#: wp-admin/network/upgrade.php:142 wp-admin/network/menu.php:46
+msgid "Upgrade Network"
+msgstr "שדרוג רשת"
+
+#. translators: New site notification email. 1: User login, 2: Site URL, 3:
+#. Site title.
+#: wp-admin/network/site-new.php:156
+msgid ""
+"New site created by %1$s\n"
+"\n"
+"Address: %2$s\n"
+"Name: %3$s"
+msgstr ""
+"אתר חדש נוצר על ידי %1$s\n"
+"\n"
+"שם: %3$s\n"
+"כתובת: %2$s"
+
+#: wp-admin/includes/network.php:260 wp-admin/includes/network.php:611
+#: wp-admin/includes/network.php:653
+msgid "Subdirectory networks may not be fully compatible with custom wp-content directories."
+msgstr "רשת תת-ספריות אינה יכולה לעבוד עם ספריות wp-content מותאמות."
+
+#: wp-admin/network.php:62
+msgid "Add the designated lines of code to wp-config.php (just before <code>/*...stop editing...*/</code>) and <code>.htaccess</code> (replacing the existing WordPress rules)."
+msgstr "יש להוסיף את שורות הקוד הייעודיות לקובץ wp-config.php (ממש לפני <code>/*...stop editing...*/</code>) ולקובץ <code>.htaccess</code> (תוך החלפת הקוד של וורדפרס)."
+
+#: wp-admin/network/settings.php:57
+msgid "Super admins can no longer be added on the Options screen. You must now go to the list of existing users on Network Admin > Users and click on Username or the Edit action link below that name. This goes to an Edit User page where you can check a box to grant super admin privileges."
+msgstr "כבר לא ניתן להוסיף מנהלי מערכת ממסך האפשרויות. מעתה יש לגשת לרשימת המשתמשים הקיימים במסך המשתמשים ברשת אתרים ושם ללחוץ על שם המשתמש או על קישור עריכת המשתמש  מתחת לשמו. הפעולה מעבירה למסך עריכת המשתמש שבו ניתן לבדוק להעניק הרשאות של מנהל מערכת."
+
+#: wp-admin/network/menu.php:41
+msgid "Updates"
+msgstr "שדרוגים"
+
+#: wp-admin/network/site-new.php:25
+msgid "This screen is for Super Admins to add new sites to the network. This is not affected by the registration settings."
+msgstr "מסך למנהלי רשת להוספת אתרים חדשים לרשת. לא מושפע מהגדרות רישום."
+
+#: wp-admin/network/sites.php:33
+msgid "An Edit link to a separate Edit Site screen."
+msgstr "קישור עריכה לעמוד נפרד לעריכת אתר."
+
+#: wp-admin/network/themes.php:240
+msgid "Themes can be enabled on a site by site basis by the network admin on the Edit Site screen (which has a Themes tab); get there via the Edit action link on the All Sites screen. Only network admins are able to install or edit themes."
+msgstr "מנהל הרשת יכול להפעיל תבנית לכל אתר בעמוד עריכת האתר (שבו יש הכרטיסייה לתבניות), לשם מגיעים דרך קישור עריכת האתר ברשימת כל האתרים. רק מנהלי הרשת יכולים להתקין או לערוך תבניות."
+
+#: wp-admin/network/sites.php:36
+msgid "Delete which is a permanent action after the confirmation screens."
+msgstr "אחריאישור הפעולה, המחיקה היא לצמיתות."
+
+#: wp-admin/network/sites.php:39
+msgid "Clicking on bold headings can re-sort this table."
+msgstr "לחיצה על כותרות מודגשות מסדרת מחדש את הטבלה."
+
+#: wp-admin/network/sites.php:30
+msgid "Add New takes you to the Add New Site screen. You can search for a site by Name, ID number, or IP address. Screen Options allows you to choose how many sites to display on one page."
+msgstr "הקישור להוספת אתר מעביר למסך הוספת אתר חדש. ניתן לחפש אתר לפי שם, מספר או כתובת IP. אפשרויות המסך מאפשרות לבחור כמה אתרים כדי להציג בדף אחד."
+
+#. translators: 1: Dashboard URL, 2: Network admin edit URL.
+#: wp-admin/network/site-new.php:193
+msgid "Site added. <a href=\"%1$s\">Visit Dashboard</a> or <a href=\"%2$s\">Edit Site</a>"
+msgstr "האתר התווסף. ניתן <a href=\"%1$s\">לבקר בלוח הבקרה</a> או <a href=\"%2$s\">לערוך את אתר</a>"
+
+#: wp-admin/network/menu.php:52
+msgid "All Sites"
+msgstr "כל האתרים"
+
+#. translators: %s: Number of available theme updates.
+#: wp-admin/network/menu.php:63
+msgid "Themes %s"
+msgstr "%s תבניות"
+
+#: wp-admin/network/menu.php:80
+msgid "Installed Themes"
+msgstr "תבניות מותקנות"
+
+#: wp-admin/network/site-settings.php:78
+msgid "Site options updated."
+msgstr "הגדרות האתר עודכנו."
+
+#: wp-admin/network/settings.php:412
+msgid "Language Settings"
+msgstr "הגדרות שפה"
+
+#: wp-admin/network/settings.php:238
+msgid "Allow site administrators to add new users to their site via the \"Users &rarr; Add New\" page"
+msgstr "אפשר למנהלי מערכת להוסיף משתמשים לאתרים שלהם דרך התפריט \"משתמשים &larr; משתמש חדש\"."
+
+#: wp-admin/network/sites.php:34
+msgid "Dashboard leads to the Dashboard for that site."
+msgstr "לוח הבקרה של האתר."
+
+#: wp-admin/network/themes.php:174
+msgid "No, return me to the theme list"
+msgstr "לא, חזור חזרה לרשימת התבניות"
+
+#. translators: %s: Site title.
+#: wp-admin/network/site-info.php:125 wp-admin/network/site-users.php:201
+#: wp-admin/network/site-themes.php:170 wp-admin/network/site-settings.php:83
+msgid "Edit Site: %s"
+msgstr "עריכת אתר: %s"
+
+#: wp-admin/network/themes.php:313 wp-admin/network/site-themes.php:208
+msgid "No theme selected."
+msgstr "לא נבחרו תבניות."
+
+#: wp-admin/network/themes.php:288 wp-admin/network/site-themes.php:192
+msgid "Theme enabled."
+msgstr "תבנית זמינה."
+
+#: wp-admin/network/site-info.php:23 wp-admin/network/site-users.php:41
+#: wp-admin/network/site-themes.php:46 wp-admin/network/site-settings.php:23
+msgid "Invalid site ID."
+msgstr "מספר אתר לא תקני."
+
+#: wp-admin/network/themes.php:297 wp-admin/network/site-themes.php:201
+msgid "Theme disabled."
+msgstr "תבנית אינה זמינה."
+
+#: wp-admin/network/user-new.php:22
+msgid "Add User will set up a new user account on the network and send that person an email with username and password."
+msgstr "הוספת משתמש תיצור חשבון חדש ברשת ותשלח לו אימייל עם פרטי ההתחברות."
+
+#: wp-admin/network/site-themes.php:212
+msgid "Network enabled themes are not shown on this screen."
+msgstr "תבניות הזמינות ברשת אינן מוצגות במסך זה."
+
+#: wp-admin/network/settings.php:20 wp-admin/network/menu.php:111
+msgid "Network Settings"
+msgstr "הגדרות רשת"
+
+#: wp-admin/network/themes.php:128
+msgid "Delete Theme"
+msgstr "מחיקת תבנית"
+
+#: wp-admin/network/themes.php:129
+msgid "This theme may be active on other sites in the network."
+msgstr "תבנית זו עשויה להיות בשימוש באתרים אחרים ברשת."
+
+#: wp-admin/network/themes.php:130
+msgid "You are about to remove the following theme:"
+msgstr "ביקשת להסיר את התבנית הבאה:"
+
+#: wp-admin/network/themes.php:164
+msgid "Yes, delete this theme"
+msgstr "כן, מחק תבנית"
+
+#: wp-admin/network/themes.php:151
+msgid "Are you sure you want to delete these themes?"
+msgstr "אתה בטוח שאתה רוצה למחוק את התבניות?"
+
+#: wp-admin/network/site-new.php:200 wp-admin/network/site-new.php:210
+msgid "Add New Site"
+msgstr "אתר חדש"
+
+#: wp-admin/network/themes.php:315
+msgid "You cannot delete a theme while it is active on the main site."
+msgstr "לא ניתן למחוק תבנית בזמן שהיא פעילה באתר הראשי."
+
+#: wp-admin/network/site-users.php:248
+msgid "Enter the username of an existing user."
+msgstr "יש להזין שם משתמש של משתמש קיים."
+
+#: wp-admin/network/site-info.php:120
+msgid "Site info updated."
+msgstr "פרטי האתר עודכנו."
+
+#: wp-admin/network/site-users.php:242
+msgid "User is already a member of this site."
+msgstr "המשתמש כבר חבר באתר."
+
+#. translators: %s: Site URL.
+#: wp-admin/network/sites.php:167
+msgid "Sorry, you are not allowed to delete the site %s."
+msgstr "אין לך הרשאות למחוק את האתר %s."
+
+#: wp-admin/network/user-new.php:54
+msgid "Cannot add user."
+msgstr "לא ניתן להוסיף משתמש."
+
+#: wp-admin/network/user-new.php:146 wp-admin/network/site-users.php:320
+msgid "Add User"
+msgstr "משתמש חדש"
+
+#: wp-admin/network/site-users.php:263
+msgid "User created."
+msgstr "המשתמש נוצר."
+
+#: wp-admin/network/site-users.php:260
+msgid "Select a user to remove."
+msgstr "בחר משתמש להסרה."
+
+#: wp-admin/network/site-users.php:254
+msgid "Select a user to change role."
+msgstr "בחר משתמש כדי לשנות תפקיד."
+
+#: wp-admin/network/site-users.php:266
+msgid "Enter the username and email."
+msgstr "הזמן שם משתמש ואימייל."
+
+#: wp-admin/network.php:63
+msgid "Once you add this code and refresh your browser, multisite should be enabled. This screen, now in the Network Admin navigation menu, will keep an archive of the added code. You can toggle between Network Admin and Site Admin by clicking on the Network Admin or an individual site name under the My Sites dropdown in the Toolbar."
+msgstr "ברגע שאתה מוסיף קוד זה ומרענן את הדפדפן, רשת אתרים צריכה להיות מופעלת. מסך ניהול האתרים, ישמור בארכיון של הקוד שנוסף. ניתן לעבור בין ניהול הרשת לניהול האתר על ידי לחיצה על ניהול רשת או שם האתר היחיד תחת רשימת אתרים בסרגל הכלים."
+
+#: wp-admin/includes/network.php:157
+msgid "Error: The network could not be created."
+msgstr "שגיאה: לא ניתן ליצור רשת אתרים."
+
+#: wp-admin/includes/network.php:243
+msgid "Sub-directories"
+msgstr "תת-ספריות"
+
+#: wp-admin/network.php:72
+msgid "Network"
+msgstr "רשת"
+
+#. translators: 1: Host name.
+#: wp-admin/includes/network.php:236
+msgctxt "subdomain examples"
+msgid "like <code>site1.%1$s</code> and <code>site2.%1$s</code>"
+msgstr "כמו <code>site1.%1$s</code> וכן <code>site2.%1$s</code>"
+
+#: wp-admin/includes/network.php:224
+msgid "Addresses of Sites in your Network"
+msgstr "כתובות של אתרים ברשת"
+
+#: wp-admin/network.php:29
+msgid "The Network creation panel is not for WordPress MU networks."
+msgstr "תפריט יצירת רשת אתרים אינו מיועד ליצירת מולטי-רשתות."
+
+#: wp-admin/includes/network.php:145
+msgid "Return to Dashboard"
+msgstr "חזרה ללוח הבקרה"
+
+#: wp-admin/network.php:55
+msgid "Create a Network of WordPress Sites"
+msgstr "יצירת רשת אתרי וורדפרס"
+
+#: wp-admin/network.php:59
+msgid "This screen allows you to configure a network as having subdomains (<code>site1.example.com</code>) or subdirectories (<code>example.com/site1</code>). Subdomains require wildcard subdomains to be enabled in Apache and DNS records, if your host allows it."
+msgstr "מסך זה מאפשר להגדיר רשת כבעל תת-דומיינים (<code>site1.example.com</code>) או תת-ספריות (<code>example.com/site1</code>). תת-דומיינים דורשים הפעלה של תחומי משנה כלליים בשרתי Apache ורשומות DNS, אם המארח שלך מאפשר זאת."
+
+#. translators: %s: URL to Plugins screen.
+#: wp-admin/includes/network.php:127
+msgid "Please <a href=\"%s\">deactivate your plugins</a> before enabling the Network feature."
+msgstr "נא <a href=\"%s\">לכבות את התוספים</a> לפני הפעלת הרשת."
+
+#: wp-admin/includes/network.php:130
+msgid "Once the network is created, you may reactivate your plugins."
+msgstr "אחרי יצירת הרשת, ניתן להפעיל את התוספים."
+
+#: wp-admin/network.php:64
+msgid "The choice of subdirectory sites is disabled if this setup is more than a month old because of permalink problems with &#8220;/blog/&#8221; from the main site. This disabling will be addressed in a future version."
+msgstr "הבחירה של אתרים בתת-ספריית אינו זמינה אם הגדרות אלה ישנות יותר מחודש, בגלל בעיות קישור מהאתר הראשי אל &#8220;/blog/&#8221;. סוגיה זו תטופל בגרסה עתידית."
+
+#: wp-admin/includes/network.php:178
+msgid "Welcome to the Network installation process!"
+msgstr "ברוכים הבאים לתהליך התקנת רשת אתרים!"
+
+#: wp-admin/includes/network.php:294
+msgid "Network Details"
+msgstr "פרטי רשת"
+
+#: wp-admin/includes/network.php:665
+msgid "Once you complete these steps, your network is enabled and configured. You will have to log in again."
+msgstr "בתום השלמת השלבים הללו, הרשת תופעל ויהיה צורך בהתחברות מחודשת לאתר."
+
+#: wp-admin/network.php:61
+msgid "The next screen for Network Setup will give you individually-generated lines of code to add to your wp-config.php and .htaccess files. Make sure the settings of your FTP client make files starting with a dot visible, so that you can find .htaccess; you may have to create this file if it really is not there. Make backup copies of those two files."
+msgstr "במסך הבא של הגדרת הרשת ייתן שורות קוד נפרדות כדי להוסיף לקובץ wp-config.php ולקובץ htaccess. יש לוודא כי ההגדרות ה-FTP מציג קבצים עם נקודה גלויה, כך שניתן יהיה למצוא את הקובץ htaccess.; ייתכן שיהיה צורך ליצור את הקובץ אם הוא לא קיים. יש ליצור גיבויים לשני הקבצים."
+
+#: wp-admin/network.php:60
+msgid "Choose subdomains or subdirectories; this can only be switched afterwards by reconfiguring your installation. Fill out the network details, and click Install. If this does not work, you may have to add a wildcard DNS record (for subdomains) or change to another setting in Permalinks (for subdirectories)."
+msgstr "בחר תת-דומיין או תת-ספריות; הדבר ניתן לשינוי על ידי הגדרה מחדש אחרי התקנה. מלא את פרטי הרשת, ולחץ על התקנה. אם זה לא עובד, ייתכן שיהיה צורך בהוספת תחומי משנה כלליים (עבור תת-דומיינים) או לשנות להגדרה אחרת את הקישורים הקבועים (עבור תת-ספריות)."
+
+#: wp-admin/includes/network.php:541
+msgid "To make your installation more secure, you should also add:"
+msgstr "כדי לאבטח יותר את המערכת, יש להוסיף:"
+
+#: wp-admin/includes/network.php:231
+msgid "Sub-domains"
+msgstr "תת-דומיינים"
+
+#: wp-admin/includes/network.php:227
+msgid "You will need a wildcard DNS record if you are going to use the virtual host (sub-domain) functionality."
+msgstr "כדי להשתמש בפונקציונאליות וירטואלית (תת-דומיינים), יש צורך ב- wildcard DNS record."
+
+#: wp-admin/includes/network.php:139
+msgid "You cannot install a network of sites with your server address."
+msgstr "לא ניתן להתקין רשת אתרים עם כתובת השרת שלך."
+
+#: wp-admin/includes/network.php:192
+msgid "Note:"
+msgstr "הערה:"
+
+#: wp-admin/includes/network.php:179
+msgid "Fill in the information below and you&#8217;ll be on your way to creating a network of WordPress sites. We will create configuration files in the next step."
+msgstr "יש מלא את הפרטים הבאים כדי יצור רשת אתרים. קבצי ההגדרות יווצרו בשלב הבא."
+
+#: wp-admin/includes/network.php:436
+msgid "Complete the following steps to enable the features for creating a network of sites."
+msgstr "השלימו את השלבים הבאים כדי שניתן יהיה ליצור רשת אתרים."
+
+#: wp-admin/includes/network.php:435
+msgid "Enabling the Network"
+msgstr "הפעלת רשת"
+
+#: wp-admin/includes/network.php:424
+msgid "Please complete the configuration steps. To create a new network, you will need to empty or remove the network database tables."
+msgstr "יש למלא את הצעדים הבאים. כדי ליצור רשת חדשה, יש לרוקן או להסיר את טבלאות מסדי הנתונים של הרשת."
+
+#: wp-admin/includes/network.php:423
+msgid "An existing WordPress network was detected."
+msgstr "אותרה רשת אתרים קיימת."
+
+#: wp-admin/includes/network.php:418
+msgid "The original configuration steps are shown here for reference."
+msgstr "הצעדים המקוריים מוצגים כאן להמלצה."
+
+#: wp-admin/includes/network.php:366
+msgid "Your email address."
+msgstr "כתובת האימייל שלך."
+
+#: wp-admin/includes/network.php:357
+msgid "What would you like to call your network?"
+msgstr "איך הרשת תיקרא?"
+
+#: wp-admin/includes/network.php:353 wp-admin/network/settings.php:153
+msgid "Network Title"
+msgstr "שם הרשת"
+
+#: wp-admin/includes/network.php:332
+msgid "Because your installation is not new, the sites in your WordPress network must use sub-domains."
+msgstr "מכיוון שזו לא התקנה חדשה, האתרים ברשת חייבים להשתמש בתת-דומיינים."
+
+#: wp-admin/includes/network.php:319
+msgid "Because your installation is in a directory, the sites in your WordPress network must use sub-directories."
+msgstr "מכיוון שהמערכת מותקנת בתת-ספרייה, האתרים ברשת חייבים להשתמש בתת-ספריות."
+
+#: wp-admin/includes/network.php:309 wp-admin/includes/network.php:322
+#: wp-admin/includes/network.php:333
+msgid "The main site in a sub-directory installation will need to use a modified permalink structure, potentially breaking existing links."
+msgstr "האתר הראשי בתת-ספרייה יצטרך להשתמש במבנה קישורים שונה, דבר שעלול לשבור קישורים קיימים."
+
+#: wp-admin/includes/network.php:266 wp-admin/includes/network.php:280
+#: wp-admin/includes/network.php:340
+msgid "Server Address"
+msgstr "כתובת שרת"
+
+#. translators: 1: Host name.
+#: wp-admin/includes/network.php:248
+msgctxt "subdirectory examples"
+msgid "like <code>%1$s/site1</code> and <code>%1$s/site2</code>"
+msgstr "כמו <code>%1$s/site1</code> וכן <code>%1$s/site2</code>"
+
+#. translators: %s: User login.
+#: wp-admin/network/users.php:77
+msgid "Warning! User cannot be modified. The user %s is a network administrator."
+msgstr "אזהרה: לא ניתן לשנות את החשבון %s, הוא שייך למנהל רשת."
+
+#: wp-admin/network/sites.php:32
+msgid "Hovering over each site reveals seven options (three for the primary site):"
+msgstr "אפשר להציב את העכבר מעל כל אתר כדי להציג את האפשרויות הבאות:"
+
+#: wp-admin/network/sites.php:38
+msgid "The site ID is used internally, and is not shown on the front end of the site or to users/viewers."
+msgstr "מספר הזיהוי או ה-ID לא מוצג למשתמשים, ונועד לשימוש פנימי בלבד."
+
+#: wp-admin/network/sites.php:35
+msgid "Deactivate, Archive, and Spam which lead to confirmation screens. These actions can be reversed later."
+msgstr "לכבות, להעביר לארכיון ולסמן כזבל מובילים למסכי אישור. אפשר לבטל את ההגדרות האלה בהמשך."
+
+#: wp-admin/network/site-new.php:26
+msgid "If the admin email for the new site does not exist in the database, a new user will also be created."
+msgstr "אם האימייל שבחרת עבור האתר החדש לא קיים עדיין במסד הנתונים, יווצר משתמש חדש עבור האתר הזה."
+
+#: wp-admin/network/settings.php:51
+msgid "Operational settings has fields for the network&#8217;s name and admin email."
+msgstr "ההגדרות הכלליות קובעות את שם הרשת וכתובת האימייל להודעות מנהלתיות."
+
+#: wp-admin/network/settings.php:54
+msgid "Upload settings control the size of the uploaded files and the amount of available upload space for each site. You can change the default value for specific sites when you edit a particular site. Allowed file types are also listed (space separated only)."
+msgstr "הגדרות העלאת קבצים קובעות את סוגי הקבצים שאפשר להעלות ושטח האחסון שיהיה זמין לכל משתמש. אפשר לעקוף את ההגדרות האלה עבור כל אתר בנפרד."
+
+#: wp-admin/network/users.php:221
+msgid "The bulk action will permanently delete selected users, or mark/unmark those selected as spam. Spam users will have posts removed and will be unable to sign up again with the same email addresses."
+msgstr "בתפריט העריכה הקבוצתית אפשר למחוק משתמשים או לסמן אותם כספאמרים. משתמשים שסומנו כספאמרים לא יוכלו להירשם מחדש עם אותו אימייל."
+
+#: wp-admin/network/users.php:219
+msgid "You can also go to the user&#8217;s profile page by clicking on the individual username."
+msgstr "ניתן גם לגשת לפרופיל המשתמש על ידי לחיצה על השם של משתמש ספציפי."
+
+#: wp-admin/network/sites.php:37
+msgid "Visit to go to the front-end site live."
+msgstr "הצג את העמוד הראשי של האתר."
+
+#: wp-admin/network/users.php:222
+msgid "You can make an existing user an additional super admin by going to the Edit User profile page and checking the box to grant that privilege."
+msgstr "אפשר להפוך כל משתמש לחבר בהנהלה בעמוד הפרופיל - צריך לסמן את השורה \"לתת לחשבון הזה הרשאות ניהול ברשת האתרים\"."
+
+#: wp-admin/network/users.php:217
+msgid "This table shows all users across the network and the sites to which they are assigned."
+msgstr "בעמוד זה מופיעים כל המשתמשים ברשת, וכל האתרים שהם חברים בהם."
+
+#: wp-admin/network/upgrade.php:24
+msgid "If a version update to core has not happened, clicking this button won&#8217;t affect anything."
+msgstr "אם לא שדרגת את התקנת הוורדפרס, הכפתור בעמוד זה לא יעשה כלום."
+
+#: wp-admin/network/upgrade.php:25
+msgid "If this process fails for any reason, users logging in to their sites will force the same update."
+msgstr "אם התהליך לא יסתיים, מכל סיבה שהיא, כל אתר ישודרג בתורו ברגע שמשתמש יתחבר ללוח הבקרה."
+
+#: wp-admin/network/users.php:220
+msgid "You can sort the table by clicking on any of the table headings and switch between list and excerpt views by using the icons above the users list."
+msgstr "ניתן למיין את הטבלה על ידי לחיצה על כל אחת משורות הכותרת, ולעבור בין תצוגה מלאה או מורחבת באמצעות האייקונים מעל רשימת המשתמשים."
+
+#: wp-admin/network/user-new.php:23
+msgid "Users who are signed up to the network without a site are added as subscribers to the main or primary dashboard site, giving them profile pages to manage their accounts. These users will only see Dashboard and My Sites in the main navigation until a site is created for them."
+msgstr "משתמשים שנרשמו לרשת ולא ביקשו לפתוח אתר מופיעים כחברים באתר הראשי או בלוח הבקרה הכללי."
+
+#: wp-admin/network/sites.php:31
+msgid "This is the main table of all sites on this network. Switch between list and excerpt views by using the icons above the right side of the table."
+msgstr "עמוד זה מציג את כל האתרים ברשת. "
+
+#: wp-admin/network/settings.php:56
+msgid "Menu setting enables/disables the plugin menus from appearing for non super admins, so that only super admins, not site admins, have access to activate plugins."
+msgstr "הגדרות התפריטים מאפשרות להסתיר את תפריט התוספים עבור משתמשים ברשת. אם התפריט מוסתר, רק הנהלת הרשת יכולה להתקין ולהפעיל תוספים."
+
+#: wp-admin/network/settings.php:52
+msgid "Registration settings can disable/enable public signups. If you let others sign up for a site, install spam plugins. Spaces, not commas, should separate names banned as sites for this network."
+msgstr "הגדרות הרישום קובעות אם משתמשים יוכלו להרשם לרשת בעצמם. ברשתות אתרים עם הרשמה פתוחה, רצוי להתקין אמצעי הגנה מפני ספאמים ותכני זבל. את המילים ברשימת הכתובות השמורות יש להפריד עם רווחים, לא פסיקים."
+
+#: wp-admin/network/settings.php:50
+msgid "This screen sets and changes options for the network as a whole. The first site is the main site in the network and network options are pulled from that original site&#8217;s options."
+msgstr "בעמוד זה אפשר לקבוע את הגדרות רשת האתרים. האתר הראשון הוא האתר הראשי ברשת, והגדרות הרשת מגיעות מההגדרות של אתר זה."
+
+#: wp-admin/network/themes.php:239
+msgid "If the network admin disables a theme that is in use, it can still remain selected on that site. If another theme is chosen, the disabled theme will not appear in the site&#8217;s Appearance > Themes screen."
+msgstr "אם כיבית תבנית שכבר פועלת באתר מסוים, היא תמשיך לפעול באותו אתר. עם זאת, ברגע שהתבנית של אותו אתר תוחלף, יותר אי אפשר יהיה לבחור אותה."
+
+#: wp-admin/network/themes.php:238
+msgid "This screen enables and disables the inclusion of themes available to choose in the Appearance menu for each site. It does not activate or deactivate which theme a site is currently using."
+msgstr "בעמוד זה אפשר לבחור את התבנית שתהיינה זמינות לשימוש על ידי משתמשים ברשת. ההגדרות האלה לא משפיעות על התבניות שנמצאות בשימוש כרגע."
+
+#: wp-admin/network/settings.php:53
+msgid "New site settings are defaults applied when a new site is created in the network. These include welcome email for when a new site or user account is registered, and what&#8127;s put in the first post, page, comment, comment author, and comment URL."
+msgstr "ברירות המחדל לאתרים חדשים מאפשרות לנסח את האימיילים שישלחו למשתמשים והתכנים שיווצרו עבור כל אתר חדש."
+
+#. translators: %s: Reserved names list.
+#: wp-admin/network/site-new.php:59
+msgid "The following words are reserved for use by WordPress functions and cannot be used as blog names: %s"
+msgstr "המילים הבאות שמורות לשימוש על ידי וורדפרס, ולא ניתן להשתמש בהן בשמות של אתרים: %s"
+
+#: wp-admin/network/upgrade.php:122
+msgid "If your browser doesn&#8217;t start loading the next page automatically, click this link:"
+msgstr "אם העמוד הבא לא נפתח אוטומטית, אפשר ללחוץ על הקישור הבא: "
+
+#: wp-admin/network/site-new.php:40
+msgid "Can&#8217;t create an empty site."
+msgstr "אי אפשר ליצור אתר ריק."
+
+#: wp-admin/network/settings.php:273
+msgid "If you want to ban domains from site registrations. One domain per line."
+msgstr "אימיילים מהדומיינים האלה לא יכולים להרשם לרשת. דומיין אחד בכל שורה. אם השדה נשאר ריק, אפשר להרשם עם אימייל מכל דומיין."
+
+#: wp-admin/network/settings.php:262
+msgid "If you want to limit site registrations to certain domains. One domain per line."
+msgstr "רק אימיילים מהדומיינים האלה יכולים להרשם לרשת. דומיין אחד בכל שורה. אם השדה נשאר ריק, אפשר להרשם עם אימייל מכל דומיין."
+
+#: wp-admin/network/sites.php:330
+msgid "Site removed from spam."
+msgstr "האתר הוסר מרשימת הזבל."
+
+#: wp-admin/network/users.php:254
+msgid "Users removed from spam."
+msgstr "משתמשים הוסרו מרשימת הספאם."
+
+#: wp-admin/network/sites.php:303
+msgid "Sites removed from spam."
+msgstr "אתר אחד הוסר מרשימת הזבל."
+
+#: wp-admin/network/sites.php:306
+msgid "Sites marked as spam."
+msgstr "האתרים סומנו כאתרי זבל."
+
+#: wp-admin/network/sites.php:333
+msgid "Site marked as spam."
+msgstr "האתר סומן כאתר זבל."
+
+#: wp-admin/network/sites.php:318
+msgid "Site archived."
+msgstr "האתר עבר לארכיון."
+
+#: wp-admin/network/users.php:257
+msgid "Users deleted."
+msgstr "משתמשים נמחקו."
+
+#: wp-admin/network/sites.php:321
+msgid "Site unarchived."
+msgstr "האתר הוצא מהארכיון."
+
+#: wp-admin/network/sites.php:324
+msgid "Site activated."
+msgstr "האתר הופעל."
+
+#: wp-admin/network/sites.php:327
+msgid "Site deactivated."
+msgstr "האתר כובה."
+
+#: wp-admin/network/users.php:251
+msgid "Users marked as spam."
+msgstr "סימנת את המשתמש כספאמר."
+
+#: wp-admin/network/sites.php:312
+msgid "Site deleted."
+msgstr "האתר נחמק."
+
+#: wp-admin/network/sites.php:309
+msgid "Sites deleted."
+msgstr "האתרים נמחקו."
+
+#: wp-admin/network/sites.php:105 wp-admin/network/sites.php:223
+msgid "Sorry, you are not allowed to change the current site."
+msgstr "אין לך הרשאות לשנות אתר זה."
+
+#: wp-admin/network/site-new.php:126
+msgid "There was an error creating the user."
+msgstr "ארעה שגיעה ביצירת המשתמש."
+
+#: wp-admin/network/settings.php:381
+msgid "Upload file types"
+msgstr "סוגי קבצים מותרים"
+
+#. translators: %s: Number of megabytes to limit uploads to.
+#: wp-admin/network/settings.php:369
+msgid "Limit total size of files uploaded to %s MB"
+msgstr "להגביל את שטח האחסון ל-%s MB"
+
+#: wp-admin/network/settings.php:355
+msgid "The URL for the first comment on a new site."
+msgstr "כתובת URL של מחבר התגובה הראשונה בכל אתר חדש."
+
+#: wp-admin/network/settings.php:328
+msgid "The first comment on a new site."
+msgstr "התגובה הראשונה בכל אתר חדש."
+
+#: wp-admin/network/settings.php:318
+msgid "The first page on a new site."
+msgstr "העמוד הראשון בכל אתר חדש."
+
+#: wp-admin/network/settings.php:308
+msgid "The first post on a new site."
+msgstr "הפוסט הראשון בכל אתר חדש."
+
+#: wp-admin/network/settings.php:337
+msgid "The author of the first comment on a new site."
+msgstr "שם המחבר של התגובה הראשונה בכל אתר חדש."
+
+#: wp-admin/network/upgrade.php:73
+msgid "All done!"
+msgstr "סיימתי!"
+
+#: wp-admin/network/settings.php:203
+msgid "Registration is disabled"
+msgstr "הרישום כבוי"
+
+#: wp-admin/network/settings.php:204
+msgid "User accounts may be registered"
+msgstr "הרישום פתוח"
+
+#: wp-admin/network/settings.php:206
+msgid "Both sites and user accounts can be registered"
+msgstr "ניתן לרשום משתמשים ואתרים חדשים"
+
+#: wp-admin/network/settings.php:205
+msgid "Logged in users may register new sites"
+msgstr "משתמשים קיימים יכולים לפתוח אתרים חדשים"
+
+#: wp-admin/network/settings.php:190
+msgid "Registration Settings"
+msgstr "הגדרות רישום"
+
+#: wp-admin/network/settings.php:279
+msgid "New Site Settings"
+msgstr "אתרים חדשים"
+
+#: wp-admin/network/settings.php:360
+msgid "Upload Settings"
+msgstr "הגדרות העלאת קבצים"
+
+#: wp-admin/network/settings.php:150
+msgid "Operational Settings"
+msgstr "הגדרות כלליות"
+
+#: wp-admin/network/settings.php:444
+msgid "Enable administration menus"
+msgstr "הפעלת תפריטי ניהול"
+
+#: wp-admin/network/site-new.php:91
+msgid "Missing email address."
+msgstr "האימייל חסר."
+
+#: wp-admin/network/site-new.php:87
+msgid "Missing or invalid site address."
+msgstr "כתובת אתר חסרה או שגויה."
+
+#: wp-admin/network/upgrade.php:122
+msgid "Next Sites"
+msgstr "האתרים הבאים"
+
+#: wp-admin/network/settings.php:247
+msgid "Users are not allowed to register these sites. Separate names by spaces."
+msgstr "הכתובות האלה ישמרו להנהלת הרשת - משתמשים אחרים לא יכולים לפתוח אתרים עם הכתובות האלה."
+
+#: wp-admin/network/settings.php:231
+msgid "Send the network admin an email notification every time someone registers a site or user account"
+msgstr "להודיע למנהל הרשת על כל משתמש חדש או אתר חדש"
+
+#: wp-admin/network/settings.php:363
+msgid "Site upload space"
+msgstr "שטח אחסון"
+
+#: wp-admin/network/settings.php:288
+msgid "The welcome email sent to new site owners."
+msgstr "האימייל הזה נשלח עם פתיחת אתר חדש."
+
+#. translators: New site notification email subject. %s: Network title.
+#: wp-admin/network/site-new.php:151
+msgid "[%s] New Site Created"
+msgstr "[%s] אתר חדש נוצר"
+
+#: wp-admin/includes/network.php:362 wp-admin/network/settings.php:160
+msgid "Network Admin Email"
+msgstr "אימייל של מנהל הרשת"
+
+#: wp-admin/network/site-new.php:286
+msgid "A new user will be created if the above email address is not in the database."
+msgstr "אפשר להזין אימייל של משתמש קיים כדי לפתוח עבורו את האתר, או להזין אימייל שלא קיים עדיין ברשת כדי ליצור משתמש חדש."
+
+#: wp-admin/network/site-new.php:282
+msgid "Admin Email"
+msgstr "אימייל של המנהל"
+
+#: wp-admin/network/site-new.php:298
+msgid "Add Site"
+msgstr "אתר חדש"
+
+#: wp-admin/network/settings.php:415
+msgid "Default Language"
+msgstr "שפה"
+
+#: wp-admin/network/settings.php:391
+msgid "Max upload file size"
+msgstr "גודל קובץ מרבי"
+
+#: wp-admin/network/settings.php:351
+msgid "First Comment URL"
+msgstr "קישור לתגובה הראשונה"
+
+#: wp-admin/network/settings.php:333
+msgid "First Comment Author"
+msgstr "מחבר התגובה הראשונה"
+
+#: wp-admin/network/settings.php:323
+msgid "First Comment"
+msgstr "תגובה ראשונה"
+
+#: wp-admin/network/settings.php:313
+msgid "First Page"
+msgstr "עמוד ראשון"
+
+#: wp-admin/network/settings.php:298
+msgid "The welcome email sent to new users."
+msgstr "האימייל הזה נשלח עם הרשמת משתמשים חדשים."
+
+#: wp-admin/network/settings.php:293
+msgid "Welcome User Email"
+msgstr "אימייל למשתמשים חדשים"
+
+#: wp-admin/network/settings.php:283
+msgid "Welcome Email"
+msgstr "אימייל לאתרים חדשים"
+
+#: wp-admin/network/settings.php:268
+msgid "Banned Email Domains"
+msgstr "אימיילים אסורים"
+
+#: wp-admin/network/settings.php:253
+msgid "Limited Email Registrations"
+msgstr "הגבלת הרשמה לפי אימייל"
+
+#: wp-admin/network/settings.php:243
+msgid "Banned Names"
+msgstr "שמות חסומים"
+
+#: wp-admin/network/settings.php:236
+msgid "Add New Users"
+msgstr "הוספת משתמשים"
+
+#: wp-admin/network/settings.php:224
+msgid "Registration notification"
+msgstr "הודעת רישום"
+
+#: wp-admin/network/settings.php:193
+msgid "Allow new registrations"
+msgstr "לאפשר רישום משתמשים חדשים"
+
+#: wp-admin/network/site-users.php:269
+msgid "Duplicated username or email address."
+msgstr "שם המשתמש או האימייל כבר קיימים."
+
+#: wp-admin/network/user-new.php:41
+msgid "Cannot create an empty user."
+msgstr "אי אפשר ליצור משתמש ריק."
+
+#: wp-admin/network/sites.php:121 wp-admin/network/sites.php:208
+msgid "Confirm"
+msgstr "לאשר"
