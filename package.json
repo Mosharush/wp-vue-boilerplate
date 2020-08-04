@@ -1,0 +1,18 @@
+{
+  "name": "wp-vue-boilerplate",
+  "version": "1.0.0",
+  "main": " ",
+  "author": "Moshe Harush <upload770@gmail.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "client",
+    "nginx",
+    "wp-headless"
+  ],
+  "scripts": {
+    "postinstall": "cd nginx/ssl && chmod +x generateKeyAndCert.sh && ./generateKeyAndCert.sh",
+    "docker:start": "DOCKERHOST=$(ifconfig | grep -E \"([0-9]{1,3}\\.){3}[0-9]{1,3}\" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n1) docker-compose up",
+    "dev": "yarn docker:start -d && yarn workspace client serve"
+  }
+}
