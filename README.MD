@@ -12,7 +12,7 @@ This project is the product of lecture on Zoom, in Hebrew language.
 
 ## Recording Video of the lecture on Youtube
 
-[![VueJs + Wordpress Headless on YouTube](https://img.youtube.com/vi/0HoCSbbde8I/2.jpg "VueJs + Wordpress Headless on YouTube")](https://www.youtube.com/watch?v=0HoCSbbde8I)
+[![VueJs + Wordpress Headless on YouTube](https://img.youtube.com/vi/0HoCSbbde8I/0.jpg "VueJs + Wordpress Headless on YouTube")](https://www.youtube.com/watch?v=0HoCSbbde8I)
 
 Source files: [https://github.com/Mosharush/wp-vue-boilerplate](https://github.com/Mosharush/wp-vue-boilerplate)
 
