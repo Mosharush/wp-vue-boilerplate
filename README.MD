@@ -30,10 +30,6 @@ Source files: [https://github.com/Mosharush/wp-vue-boilerplate](https://github.c
 - A Starter build of `VueJs` App integration with `WordPress` Headless.
 - [`Docker`](https://docs.docker.com/get-started/overview/)
   for servers virtualization and quick startup.
-
-- [`Nginx Reverse Proxy Server & Configs`](https://www.nginx.com/resources/glossary/reverse-proxy-server/)
-  For serve `WordPress` & `VueJS` apps both on same port and one origin (CORS).
-  - SSL Support on local machine.
 - [`MySQL Server`](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
   For a local DataBase to store `WordPress` data.
   - `PhpMyAdmin` Web-App to access `MySQL` Data via GUI.
@@ -62,6 +58,12 @@ Start Only `Docker` Services with `Docker Compose`:
 
 ```
 yarn start:docker
+```
+
+Stop docker containers:
+
+```
+yarn stop
 ```
 
 Start Only `Vue App` Dev Server (HMR):

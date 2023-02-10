@@ -11,6 +11,7 @@
   "scripts": {
     "start:docker": "docker-compose up",
     "start:client": "yarn workspace front dev",
-    "start:all": "yarn start:docker -d && yarn start:client"
+    "start:all": "yarn start:docker -d && yarn start:client",
+    "stop": "docker-compose down"
   }
 }
