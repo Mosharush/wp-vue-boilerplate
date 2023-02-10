@@ -6,15 +6,11 @@
   "license": "MIT",
   "private": true,
   "workspaces": [
-    "client",
-    "nginx",
-    "wp-headless"
+    "apps/*"
   ],
   "scripts": {
-    "generate:ssl": "cd nginx/ssl && chmod +x generateKeyAndCert.sh && ./generateKeyAndCert.sh",
-    "start:docker": "DOCKERHOST=$(ifconfig | grep -E \"([0-9]{1,3}\\.){3}[0-9]{1,3}\" | grep -v 127.0.0.1 | awk '{ print $2 }' | cut -f2 -d: | head -n1) docker-compose up",
-    "start:client": "yarn workspace client serve",
-    "start:all": "yarn start:docker -d && yarn start:client",
-    "postinstall": "yarn generate:ssl"
+    "start:docker": "docker-compose up",
+    "start:client": "yarn workspace front dev",
+    "start:all": "yarn start:docker -d && yarn start:client"
   }
 }

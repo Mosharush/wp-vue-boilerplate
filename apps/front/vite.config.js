@@ -15,7 +15,7 @@ export default defineConfig({
     host: "0.0.0.0",
     proxy: {
       "/wp-json": {
-        target: "http://localhost:8080",
+        target: "http://localhost:8000",
         changeOrigin: true,
       },
     },

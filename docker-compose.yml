@@ -6,48 +6,45 @@ services:
     restart: always
     environment:
       WORDPRESS_DB_HOST: db:3306
-      WORDPRESS_DB_USER: root
+      WORDPRESS_DB_USER: wp
       WORDPRESS_DB_PASSWORD: MyStr0ngP455
+      WORDPRESS_DB_COLLATE: utf8_unicode_ci
+      WORDPRESS_DB_NAME: wordpress
     volumes:
-      - ./wp-headless/wp-content:/var/www/html/wp-content
+      - ./apps/wp-headless/wp-content:/var/www/html/wp-content
     depends_on:
       - db
     ports:
-      - 81:80
+      - 8000:80
 
   db:
     image: mysql:latest
-    command: --default-authentication-plugin=mysql_native_password
+    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0
     restart: always
     ports:
       - "3306:3306"
     environment:
+      MYSQL_USER: wp
+      MYSQL_PASSWORD: MyStr0ngP455
       MYSQL_ROOT_PASSWORD: MyStr0ngP455
+      MYSQL_DATABASE: wordpress
+    volumes:
+          - wpdb:/var/lib/mysql
+          - ./apps/wp-headless/mysql.cnf:/etc/mysql/conf.d/custom.cnf
 
   phpmyadmin:
     depends_on:
       - db
     image: phpmyadmin/phpmyadmin
     restart: always
+    ports:
+      - 8080:80
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
       PMA_USER: root
       PMA_PASSWORD: MyStr0ngP455
 
-  reverse:
-    image: nginx
-    restart: always
-    ports:
-      - 80:80
-      - 443:443
-    volumes:
-      - ./nginx/nginx.conf:/etc/nginx/nginx.conf
-      - ./nginx/ssl/certificates/server.crt:/etc/nginx/server.crt
-      - ./nginx/ssl/certificates/server.key:/etc/nginx/server.key
-      - ./nginx/ssl/certificates/dhparam.pem:/etc/nginx/dhparam.pem
-    depends_on:
-      - wordpress
-      - db
-    extra_hosts:
-      - "host.docker.internal:$DOCKERHOST"
+volumes:
+    wpdb:
+        driver: local
