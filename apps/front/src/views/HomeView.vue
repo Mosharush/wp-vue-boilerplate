@@ -27,10 +27,7 @@ export default {
       try {
         posts.value = await apiFetch({ path: "/wp-json/wp/v2/posts" });
       } catch (e) {
-        error.value = {
-          link: `${location.protocol}//${location.hostname}:8000`,
-          ...e,
-        };
+        error.value = e;
       }
     }
     fetchPosts();
