@@ -7,6 +7,7 @@
     <a v-if="error.link" target="_blank" :href="error.link">
       Go to Wordpress site
     </a>
+    OR try to set friendly urls on <a target="_blank" :href="error.link + '/wp-admin/options-permalink.php'">permalinks in WordPress</a>.
   </div>
 </template>
 
