@@ -8,7 +8,7 @@ permissions:
 on:
     push:
         paths:
-            - 'plugins/wordpress/**'
+            - 'apps/wp-plugin/**'
         branches:
             - main
 
@@ -19,26 +19,6 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-
-            - name: Export Variables
-              uses: './.github/actions/export-vars'
-              with:
-                  ROOT_DOMAIN: ${{ vars.ROOT_DOMAIN }}
-                  EKS_CLUSTER_NAME: ${{ vars.EKS_CLUSTER_NAME }}
-                  EKS_DEV_CLUSTER_NAME: ${{ vars.EKS_DEV_CLUSTER_NAME }}
-                  EKS_STAGE_CLUSTER_NAME: ${{ vars.EKS_STAGE_CLUSTER_NAME }}
-                  EKS_PROD_CLUSTER_NAME: ${{ vars.EKS_PROD_CLUSTER_NAME }}
-                  ENVIRONMENT: ${{ github.event.inputs.environment || '' }}
-
-            - name: Print ENV
-              run: |
-                  echo "BRANCH_ENV=${BRANCH_ENV}"
-                  echo "EKS_CLUSTER_NAME=${EKS_CLUSTER_NAME}"
-                  echo "NODE_ENV=${NODE_ENV}"
-                  echo "VERSION_HASH=${VERSION_HASH}"
-                  echo "CI_BRANCH=${CI_BRANCH}"
-                  echo "BRANCH=${BRANCH}"
-                  echo "BRANCH_DOMAIN=${BRANCH_DOMAIN}"
 
             - name: Cache yarn cache
               id: yarn-cache
@@ -57,7 +37,7 @@ jobs:
 
             - name: Bump version
               run: |
-                  cd plugins/wordpress
+                  cd apps/wp-plugin
                   yarn bump-version
                   git push
 
@@ -68,15 +48,15 @@ jobs:
 
             - name: Export to SVN
               run: |
-                  PLUGIN_SLUG=selectika
+                  PLUGIN_SLUG=elm-users-tracking
                   SVN_REPO="https://plugins.svn.wordpress.org/$PLUGIN_SLUG/"
-                  CURRENT_VERSION=$(node -p -e "require('./plugins/wordpress/package.json').version")
+                  CURRENT_VERSION=$(node -p -e "require('./apps/wp-plugin/package.json').version")
                   SVN_DIR=svn-wordpress
 
                   svn checkout $SVN_REPO $SVN_DIR
 
-                  rsync -r --delete --exclude='.svn' ./plugins/wordpress/ $SVN_DIR/trunk/
-                  rsync -r --delete --exclude='.svn' ./plugins/wordpress/ $SVN_DIR/trunk/
+                  rsync -r --delete --exclude='.svn' ./apps/wp-plugin/ $SVN_DIR/trunk/
+                  rsync -r --delete --exclude='.svn' ./apps/wp-plugin/ $SVN_DIR/trunk/
 
                   cd $SVN_DIR
                   svn propset svn:ignore -RF .svnignore .
