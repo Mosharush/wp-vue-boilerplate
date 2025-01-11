@@ -1,0 +1,27 @@
+{
+  "name": "selectika-wc-plugin",
+  "version": "1.0.0",
+  "description": "A WordPress plugin that adds a shortcode for the Selectika WC web component and its script.",
+  "main": "selectika-wc.php",
+  "scripts": {
+    "test": "echo 'No test specified'",
+    "bump-version": "./bump-version.sh"
+  },
+  "keywords": [
+    "selectika",
+    "fashion",
+    "clothing",
+    "e-commerce",
+    "store",
+    "shop",
+    "AI",
+    "artificial-intelligence",
+    "wordpress",
+    "plugin",
+    "shortcode",
+    "retail",
+    "woocommerce"
+  ],
+  "author": "Selectika Team",
+  "license": "MIT"
+}
