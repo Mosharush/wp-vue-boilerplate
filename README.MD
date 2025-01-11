@@ -46,8 +46,6 @@ Install all dependencies with Yarn (not NPM, we using Yarn workspaces)
 yarn install
 ```
 
-- Post install action: we generate a SSL certificate for `localhost` domain to support https connections. you can change the registered domains on `nginx/ssl/v3.ext` file and run generate `yarn generate:ssl`
-
 Start All Servers:
 
 ```
@@ -66,7 +64,7 @@ Stop docker containers:
 yarn stop
 ```
 
-Start Only `Vue App` Dev Server (HMR):
+Start Only `React App` Dev Server (HMR):
 
 ```
 yarn start:client

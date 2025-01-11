@@ -1,0 +1,135 @@
+name: 'Export Variable'
+description: 'Sets up environment variables for workflows'
+inputs:
+    ROOT_DOMAIN:
+        description: 'The root domain for the deployments'
+        required: true
+
+    EKS_CLUSTER_NAME:
+        description: 'The name of the EKS cluster - default for all environments'
+        required: true
+
+    EKS_DEV_CLUSTER_NAME:
+        description: 'The name of the EKS cluster for development'
+        required: false
+
+    EKS_STAGE_CLUSTER_NAME:
+        description: 'The name of the EKS cluster for staging'
+        required: false
+
+    EKS_PROD_CLUSTER_NAME:
+        description: 'The name of the EKS cluster for production'
+        required: false
+
+    ENVIRONMENT:
+        description: 'The environment for deployment'
+        required: false
+
+runs:
+    using: 'composite'
+    steps:
+        - name: Export MonoX variables
+          shell: bash
+          run: |
+              echo "GITHUB_EVENT_NAME=${GITHUB_EVENT_NAME}"
+              echo "github.event=${{ github.event }}"
+              echo "github.event.before=${{ github.event.before }}"
+
+              if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
+                REF="${{ github.head_ref }}"
+              elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]; then
+                REF="${{ github.ref }}"
+              elif [[ "${GITHUB_EVENT_NAME}" == "delete" ]]; then
+                REF="${{ github.event.ref }}"
+              fi
+              REF="${REF#refs/heads/}"
+
+              VERSION_HASH=${GITHUB_SHA::7}
+              BRANCH="${REF}"
+              CI_BRANCH=${BRANCH}
+              BRANCH=${BRANCH,,}
+              BRANCH=${BRANCH////-}
+              NAMESPACE="b-${BRANCH}"
+              ROOT_DOMAIN=${{ inputs.ROOT_DOMAIN }}
+              PORT=3000
+
+              if [[ "${GITHUB_EVENT_NAME}" == "pull_request" ]]; then
+                BASE_COMMIT=${{ github.event.pull_request.base.sha }}
+              elif [[ "${GITHUB_EVENT_NAME}" == "push" ]]; then
+                BASE_COMMIT=${{ github.event.before }}
+                if [[ "${BASE_COMMIT:0:7}" == "0000000" ]]; then
+                    # Check if 'main' branch exists
+                    if git show-ref --verify --quiet refs/heads/main; then
+                        BASE_COMMIT=$(git rev-parse main)
+                    else
+                        BASE_COMMIT=$(git rev-parse HEAD^)
+                    fi
+                fi
+              elif [[ "${GITHUB_EVENT_NAME}" == "delete" ]]; then
+                BASE_COMMIT=${{ github.sha }}
+              fi
+              if [[ -z "${BASE_COMMIT}" ]]; then
+                BASE_COMMIT=$(git rev-parse HEAD^)
+              fi
+
+              echo "BASE_COMMIT=${BASE_COMMIT::7}" >> $GITHUB_ENV
+
+              # Assign inputs to variables
+              EKS_CLUSTER_NAME=${{ inputs.EKS_CLUSTER_NAME }}
+              EKS_DEV_CLUSTER_NAME=${{ inputs.EKS_DEV_CLUSTER_NAME }}
+              EKS_STAGE_CLUSTER_NAME=${{ inputs.EKS_STAGE_CLUSTER_NAME }}
+              EKS_PROD_CLUSTER_NAME=${{ inputs.EKS_PROD_CLUSTER_NAME }}
+
+              # Set fallbacks
+              EKS_DEV_CLUSTER_NAME=${EKS_DEV_CLUSTER_NAME:-$EKS_CLUSTER_NAME}
+              EKS_STAGE_CLUSTER_NAME=${EKS_STAGE_CLUSTER_NAME:-$EKS_DEV_CLUSTER_NAME}
+              EKS_PROD_CLUSTER_NAME=${EKS_PROD_CLUSTER_NAME:-$EKS_STAGE_CLUSTER_NAME}
+              EKS_STAGE_CLUSTER_NAME=${EKS_STAGE_CLUSTER_NAME:-$EKS_PROD_CLUSTER_NAME}
+              EKS_DEV_CLUSTER_NAME=${EKS_DEV_CLUSTER_NAME:-$EKS_STAGE_CLUSTER_NAME}
+
+              (
+                echo "VERSION_HASH=${VERSION_HASH}"
+                echo "CI_BRANCH=${CI_BRANCH}"
+                echo "BRANCH=${BRANCH}"
+                echo "NAMESPACE=${NAMESPACE}"
+                echo "ROOT_DOMAIN=${ROOT_DOMAIN}"
+                echo "BRANCH_DOMAIN=${BRANCH}.${ROOT_DOMAIN}"
+                echo "PORT=3000"
+              ) >> $GITHUB_ENV
+
+              if [[ "${GITHUB_EVENT_NAME}" == "workflow_dispatch" ]]; then
+                ENVIRONMENT=${{ inputs.ENVIRONMENT }}
+              else
+                if [[ "${BRANCH}" == "main" ]]
+                then
+                  ENVIRONMENT="production"
+                elif [[ "${BRANCH}" == "stg" ]] || [[ "${BRANCH}" == release* ]] || [[ "${BRANCH}" == hotfix* ]]
+                then
+                  ENVIRONMENT="staging"
+                else
+                  ENVIRONMENT="development"
+                fi
+              fi
+
+              if [[ "${ENVIRONMENT}" == "production" ]]
+              then
+                (
+                  echo "BRANCH_ENV=prod"
+                  echo "EKS_CLUSTER_NAME=${EKS_PROD_CLUSTER_NAME}"
+                  echo "NODE_ENV=production"
+                  echo "BRANCH_DOMAIN=${ROOT_DOMAIN}"
+                ) >> $GITHUB_ENV
+              elif [[ "${ENVIRONMENT}" == "staging" ]]
+              then
+                (
+                  echo "BRANCH_ENV=stg"
+                  echo "EKS_CLUSTER_NAME=${EKS_STAGE_CLUSTER_NAME}"
+                  echo "NODE_ENV=production"
+                ) >> $GITHUB_ENV
+              else
+                (
+                  echo "BRANCH_ENV=dev"
+                  echo "EKS_CLUSTER_NAME=${EKS_DEV_CLUSTER_NAME}"
+                  echo "NODE_ENV=development"
+                ) >> $GITHUB_ENV
+              fi

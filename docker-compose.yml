@@ -11,15 +11,15 @@ services:
       WORDPRESS_DB_COLLATE: utf8_unicode_ci
       WORDPRESS_DB_NAME: wordpress
     volumes:
-      - ./apps/wp-headless/wp-content:/var/www/html/wp-content
+      - ./apps/wp-plugin:/var/www/html/wp-content/plugins/elm-users-tracking
     depends_on:
       - db
     ports:
       - 8000:80
 
   db:
-    image: mysql:latest
-    command: mysqld --character-set-server=utf8 --collation-server=utf8_unicode_ci --init-connect='SET NAMES UTF8;' --innodb-flush-log-at-trx-commit=0
+    image: mysql:8.0.35
+    command: mysqld --character-set-server=utf8mb4 --collation-server=utf8mb4_unicode_ci --init-connect='SET NAMES UTF8MB4;' --innodb-flush-log-at-trx-commit=0
     restart: always
     ports:
       - "3306:3306"
@@ -30,7 +30,7 @@ services:
       MYSQL_DATABASE: wordpress
     volumes:
           - wpdb:/var/lib/mysql
-          - ./apps/wp-headless/mysql.cnf:/etc/mysql/conf.d/custom.cnf
+          - ./apps/wp-plugin/mysql.cnf:/etc/mysql/conf.d/custom.cnf
 
   phpmyadmin:
     depends_on:

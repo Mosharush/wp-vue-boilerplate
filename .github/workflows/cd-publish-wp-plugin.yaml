@@ -1,0 +1,87 @@
+name: Publish Plugin
+
+permissions:
+    contents: write
+    deployments: write
+    packages: write
+
+on:
+    push:
+        paths:
+            - 'plugins/wordpress/**'
+        branches:
+            - main
+
+jobs:
+    build:
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Export Variables
+              uses: './.github/actions/export-vars'
+              with:
+                  ROOT_DOMAIN: ${{ vars.ROOT_DOMAIN }}
+                  EKS_CLUSTER_NAME: ${{ vars.EKS_CLUSTER_NAME }}
+                  EKS_DEV_CLUSTER_NAME: ${{ vars.EKS_DEV_CLUSTER_NAME }}
+                  EKS_STAGE_CLUSTER_NAME: ${{ vars.EKS_STAGE_CLUSTER_NAME }}
+                  EKS_PROD_CLUSTER_NAME: ${{ vars.EKS_PROD_CLUSTER_NAME }}
+                  ENVIRONMENT: ${{ github.event.inputs.environment || '' }}
+
+            - name: Print ENV
+              run: |
+                  echo "BRANCH_ENV=${BRANCH_ENV}"
+                  echo "EKS_CLUSTER_NAME=${EKS_CLUSTER_NAME}"
+                  echo "NODE_ENV=${NODE_ENV}"
+                  echo "VERSION_HASH=${VERSION_HASH}"
+                  echo "CI_BRANCH=${CI_BRANCH}"
+                  echo "BRANCH=${BRANCH}"
+                  echo "BRANCH_DOMAIN=${BRANCH_DOMAIN}"
+
+            - name: Cache yarn cache
+              id: yarn-cache
+              uses: actions/cache@v4
+              with:
+                  path: |
+                      .nx
+                      .yarn/cache
+                      **/node_modules
+                  key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
+                  restore-keys: |
+                      ${{ runner.os }}-yarn-
+
+            - name: Install dependencies
+              run: yarn --immutable
+
+            - name: Bump version
+              run: |
+                  cd plugins/wordpress
+                  yarn bump-version
+                  git push
+
+            - name: Setup Subversion
+              run: |
+                  sudo apt-get update
+                  sudo apt-get install subversion
+
+            - name: Export to SVN
+              run: |
+                  PLUGIN_SLUG=selectika
+                  SVN_REPO="https://plugins.svn.wordpress.org/$PLUGIN_SLUG/"
+                  CURRENT_VERSION=$(node -p -e "require('./plugins/wordpress/package.json').version")
+                  SVN_DIR=svn-wordpress
+
+                  svn checkout $SVN_REPO $SVN_DIR
+
+                  rsync -r --delete --exclude='.svn' ./plugins/wordpress/ $SVN_DIR/trunk/
+                  rsync -r --delete --exclude='.svn' ./plugins/wordpress/ $SVN_DIR/trunk/
+
+                  cd $SVN_DIR
+                  svn propset svn:ignore -RF .svnignore .
+                  svn add --force * --auto-props --parents --depth infinity -q
+                  svn ci -m "Update to version $CURRENT_VERSION" --username ${{ secrets.WP_SVN_USERNAME }} --password ${{ secrets.WP_SVN_PASSWORD }}
+
+                  svn cp trunk tags/$CURRENT_VERSION
+                  svn ci -m "Tagging version $CURRENT_VERSION" --username ${{ secrets.WP_SVN_USERNAME }} --password ${{ secrets.WP_SVN_PASSWORD }}
