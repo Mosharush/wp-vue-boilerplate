@@ -12,7 +12,7 @@
     "test:watch": "jest --watch"
   },
   "dependencies": {
-    "@wordpress/api-fetch": "^6.23.0",
+    "@wordpress/api-fetch": "^7.17.0",
     "autoprefixer": "^10.4.20",
     "next": "^15.1.4",
     "postcss": "^8.4.49",
