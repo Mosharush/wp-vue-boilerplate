@@ -1,4 +1,4 @@
-# Contributing to React + Wordpress Headless Boilerplate
+# Contributing to VueJs + Wordpress Headless Boilerplate
 
 ♥ It and want to get involved?
 Thanks! We're actively looking for folks interested in helping out and there
