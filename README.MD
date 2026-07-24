@@ -5,9 +5,8 @@
 > is not actively maintained, and its historical dependency set should not be
 > used unchanged in production.
 
-The intended Vue/WordPress project was restored in July 2026 after unrelated
-content was accidentally committed to this repository. The recovery
-preserves the public history, stars, forks, and original project timeline.
+For the July 2026 repository restoration record, see
+[HISTORY.md](HISTORY.md).
 
 ## What this demonstrates
 
@@ -32,9 +31,9 @@ WordPress + MySQL
 
 The root workspace contains:
 
-- `apps/front` — Vue application and its unit/end-to-end test setup;
-- `apps/wp-headless` — WordPress content mounted into the local environment;
-- `docker-compose.yml` — historical local service composition.
+- `apps/front`: Vue application and its unit/end-to-end test setup;
+- `apps/wp-headless`: WordPress content mounted into the local environment;
+- `docker-compose.yml`: historical local service composition.
 
 ## Lecture
 
