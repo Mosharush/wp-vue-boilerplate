@@ -1,87 +1,93 @@
-# VueJs + Wordpress Headless Boilerplate
+# Vue 3 + WordPress Headless Boilerplate
 
-[![LICENSE](https://img.shields.io/badge/license-MIT-lightgrey.svg)](https://github.com/Mosharush/wp-vue-boilerplate/blob/master/LICENSE.txt)
-[![github-stars-image](https://img.shields.io/github/stars/Mosharush/wp-vue-boilerplate.svg?label=github%20stars)](https://github.com/Mosharush/wp-vue-boilerplate)
+> **Historical public reference.** This repository accompanies a Hebrew
+> lecture about combining a Vue front end with WordPress as a headless CMS. It
+> is not actively maintained, and its historical dependency set should not be
+> used unchanged in production.
 
----
+The intended Vue/WordPress project was restored in July 2026 after unrelated
+content was accidentally committed to this repository. The recovery
+preserves the public history, stars, forks, and original project timeline.
 
-VueJs + Wordpress Headless Boilerplate is a project template for building
-fast, robust, and adaptable web apps or sites based on VueJS for the front-end & Wordpress as Headless CMS for the back-end.
+## What this demonstrates
 
-This project is the product of lecture on Zoom, in Hebrew language.
+- a Vue 3 and Vite front end;
+- WordPress used as a headless CMS;
+- Yarn workspaces for the application packages;
+- a Docker Compose development environment with WordPress, MySQL, and
+  phpMyAdmin;
+- a mounted `wp-content` extension surface for local WordPress development.
 
-## Recording Video of the lecture on Youtube
+## Architecture
 
-[![VueJs + Wordpress Headless on YouTube](https://img.youtube.com/vi/0HoCSbbde8I/0.jpg "VueJs + Wordpress Headless on YouTube")](https://www.youtube.com/watch?v=0HoCSbbde8I)
-
-Source files: [https://github.com/Mosharush/wp-vue-boilerplate](https://github.com/Mosharush/wp-vue-boilerplate)
-
-## Quick start
-
-- Clone the git repo — `git clone https://github.com/Mosharush/wp-vue-boilerplate.git`
-- Open the project with your favorite IDE — ex: `codium wp-vue-boilerplate`
-- Install all dependencies with Yarn — `yarn install`
-- Start All dev servers (include Dockers services) — `yarn start:all`
-- All is ready! Go to [http://localhost](http://localhost) to view your app or Go to your [`WordPress Admin Dashboard`](http://localhost/wp-admin/).
-
-## Features
-
-- A finely-tuned starter template to development End-to-End Web application.
-- A Starter build of `VueJs` App integration with `WordPress` Headless.
-- [`Docker`](https://docs.docker.com/get-started/overview/)
-  for servers virtualization and quick startup.
-- [`MySQL Server`](https://dev.mysql.com/doc/refman/8.0/en/what-is-mysql.html)
-  For a local DataBase to store `WordPress` data.
-  - `PhpMyAdmin` Web-App to access `MySQL` Data via GUI.
-- `wp-content` directory volume access included A `headless` plugin to write your custom code to integrate with `WordPress` Hooks and more...
-  - Feature Ongoing: `wp-config.php` manipulate.
-- An example global Yarn (worksapces) package.json file with commands
-  built in to jumpstart application development
-
-## Commands
-
-Install all dependencies with Yarn (not NPM, we using Yarn workspaces)
-
-```
-yarn install
+```text
+Browser
+   |
+Vue 3 / Vite front end
+   |
+WordPress REST API
+   |
+WordPress + MySQL
 ```
 
-- Post install action: we generate a SSL certificate for `localhost` domain to support https connections. you can change the registered domains on `nginx/ssl/v3.ext` file and run generate `yarn generate:ssl`
+The root workspace contains:
 
-Start All Servers:
+- `apps/front` — Vue application and its unit/end-to-end test setup;
+- `apps/wp-headless` — WordPress content mounted into the local environment;
+- `docker-compose.yml` — historical local service composition.
 
-```
+## Lecture
+
+[Watch the original Hebrew lecture on YouTube](https://www.youtube.com/watch?v=0HoCSbbde8I).
+
+## Local development
+
+Requirements: Yarn 1, Docker, and Docker Compose compatible with this
+historical configuration. The Compose stack uses unpinned `latest` images and
+should be reviewed before it is run on a current Docker installation.
+
+```bash
+git clone https://github.com/Mosharush/wp-vue-boilerplate.git
+cd wp-vue-boilerplate
+yarn install --frozen-lockfile
 yarn start:all
 ```
 
-Start Only `Docker` Services with `Docker Compose`:
+`start:all` starts the Docker services and then runs the Vue/Vite client
+separately. By default, Vite listens on port `3000`, WordPress on `8000`, and
+phpMyAdmin on `8080`.
 
-```
-yarn start:docker
+These development services bind to all interfaces by default. Run them only on
+a trusted development machine and do not expose their ports to an untrusted
+network.
+
+Useful commands:
+
+```bash
+yarn start:docker  # start the Docker services
+yarn start:client  # start only the Vue/Vite client
+yarn stop          # stop the Docker services
 ```
 
-Stop docker containers:
+## Verification
 
-```
-yarn stop
-```
+The restored tree was checked with a frozen Yarn 1 install (lifecycle scripts
+disabled), a Vite production build, and the existing unit-test suite.
 
-Start Only `Vue App` Dev Server (HMR):
+## Security and maintenance status
 
-```
-yarn start:client
-```
+- The repository is preserved for learning and historical reference.
+- Dependencies are old and GitHub currently reports unresolved Dependabot
+  alerts; review and upgrade them before reuse.
+- The Docker, database, TLS, and local-service defaults are not current
+  production security guidance.
+- Do not expose the development services to an untrusted network.
 
 ## Contributing
 
-Hundreds of developers have helped to make the HTML5 Boilerplate. Anyone is
-welcome to [contribute](.github/CONTRIBUTING.md), however, if you decide to get
-involved, please take a moment to review the [guidelines](.github/CONTRIBUTING.md):
-
-- [Bug reports](.github/CONTRIBUTING.md#bugs)
-- [Feature requests](.github/CONTRIBUTING.md#features)
-- [Pull requests](.github/CONTRIBUTING.md#pull-requests)
+The project is not under active feature development. Focused documentation or
+security-maintenance fixes may still be reviewed through pull requests.
 
 ## License
 
-The code is available under the [MIT license](LICENSE.txt).
+Available under the [MIT license](LICENSE).
